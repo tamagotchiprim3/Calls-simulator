@@ -1,18 +1,20 @@
-<form nz-form>
-  <nz-form-item>
-    <nz-form-label>Login</nz-form-label>
-    <nz-form-control>
-      <input nz-input type="text">
-    </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-label>Password</nz-form-label>
-    <nz-form-control>
-      <input nz-input type="password">
-    </nz-form-control>
-  </nz-form-item>
+<div class="form-wrapper">
+  <img class="rzd-icon"  src="../../../../../assets/images/icon.png" alt="">
+  <form nz-form [formGroup]="authForm" nzLayout="vertical">
+    <nz-form-item>
+      <nz-form-label>Login</nz-form-label>
+      <nz-form-control nzErrorTip="Invalid login">
+        <input class="auth-form-input" placeholder="Please, enter your login" formControlName="login" nz-input type="text">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label>Password</nz-form-label>
+      <nz-form-control nzErrorTip="Invalid password">
+        <input class="auth-form-input" placeholder="Please, enter your password" formControlName="password" nz-input type="password">
+      </nz-form-control>
+    </nz-form-item>
 
-<button (click)="submit()"></button>
-</form>
-
+  <button nz-button nzType="primary" class="login-button" (click)="submit()">Login</button>
+  </form>
+</div>
 

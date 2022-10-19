@@ -25,8 +25,8 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     if (
-      localStorage.getItem(LOGIN_TOKEN) &&
-      localStorage.getItem(PASSWORD_TOKEN)
+      localStorage.getItem(LOGIN_TOKEN) === 'Yuriy' &&
+      localStorage.getItem(PASSWORD_TOKEN) === '12345678'
     ) {
       return true;
     } else {
