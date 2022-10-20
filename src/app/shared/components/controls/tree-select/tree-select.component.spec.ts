@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RecentCallsFormComponent } from './recent-calls-form.component';
+import { TreeSelectComponent } from './tree-select.component';
 
-describe('RecentCallsFormComponent', () => {
-  let component: RecentCallsFormComponent;
-  let fixture: ComponentFixture<RecentCallsFormComponent>;
+describe('TreeSelectComponent', () => {
+  let component: TreeSelectComponent;
+  let fixture: ComponentFixture<TreeSelectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RecentCallsFormComponent ]
+      declarations: [ TreeSelectComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RecentCallsFormComponent);
+    fixture = TestBed.createComponent(TreeSelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

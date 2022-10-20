@@ -18,8 +18,8 @@ export class LoginInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     if (
-      !(localStorage.getItem(LOGIN_TOKEN) === 'Yuriy') ||
-      !(localStorage.getItem(PASSWORD_TOKEN) === '12345678')
+      !localStorage.getItem(LOGIN_TOKEN) ||
+      !localStorage.getItem(PASSWORD_TOKEN)
     ) {
       this.router.navigate([AUTH_PATH.path]);
       localStorage.clear();

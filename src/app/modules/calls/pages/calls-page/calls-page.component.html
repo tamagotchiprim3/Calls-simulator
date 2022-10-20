@@ -2,7 +2,7 @@
   <img nz-image *ngIf="isRecording" class="call-icon" nzSrc="../../../../../assets/images/call-icon.jpg">
   <img nz-image *ngIf="!isRecording" class="call-icon" nzSrc="../../../../../assets/images/decline-call-icon.png">
 
-  <div class="timer">
+  <div class="timer" *ngIf="(minutes === 0 && seconds === 0) ? false : true">
     <span class="timer-text" nz-typography>{{minutes}}:{{seconds}}</span>
   </div>
   <button class="call-button" nz-button nzType="primary" (click)="startRecord()" class="btn btn-primary" *ngIf="!isRecording"> Call </button>

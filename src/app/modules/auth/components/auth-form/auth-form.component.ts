@@ -22,26 +22,12 @@ export class AuthFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.authForm = formBuilder.group({
-      login: ['', [Validators.required, this.chechLoginValidator]],
-      password: ['', [Validators.required, this.chechPasswordValidator]],
+      login: ['', Validators.required],
+      password: ['', Validators.required],
     });
   }
 
   ngOnInit(): void {}
-
-  public chechLoginValidator(control: FormControl): any {
-    if (!(control.value === 'Yuriy')) {
-      return { login: true };
-    }
-    return null;
-  }
-
-  public chechPasswordValidator(control: FormControl): any {
-    if (!(control.value === '12345678')) {
-      return { password: true };
-    }
-    return null;
-  }
 
   public checkFormValidation(): void {
     if (this.authForm.invalid) {

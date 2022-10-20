@@ -1,0 +1,18 @@
+<nz-list nzBordered nzHeader="Calls">
+  <nz-list-item *ngFor="let item of listOfData;trackBy: trackByFn;let i = index">
+    <div>{{item.typeOfCall}}</div>
+    <div>{{item.name}}</div>
+    <div>Time of call: {{item.time}}</div>
+    <div>Start: {{item.timeOfStart | date:"dd.MM.yyyy hh.mm.ss"}} </div>
+    <div>End: {{item.timeOfEnd  | date:"dd.MM.yyyy hh.mm.ss"}}</div>
+    <ul nz-list-item-actions>
+      <nz-list-item-action>
+        <button nz-button nzType="primary" (click)="deleteCall(i)">Delete</button>
+      </nz-list-item-action>
+      <nz-list-item-action>
+        <app-tree-select [formControl]="getFormControlByIndex(i)"></app-tree-select>
+        <button nz-button (click)="addType(i)">Submit</button>
+      </nz-list-item-action>
+    </ul>
+  </nz-list-item>
+</nz-list>
