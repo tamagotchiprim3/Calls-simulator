@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  height: 100%;
+  background-color: white;
+  ::ng-deep {
+    .ant-menu-inline {
+      width: 200px;
+    }
+    .ant-divider-horizontal {
+      display: flex;
+      clear: both;
+      width: 100%;
+      min-width: 100%;
+      margin: 0px 0px 10px 0px;
+    }
+  }
+}
+.side-bar-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #001529;
+}
+
+.collapse-button {
+  margin-bottom: 10px;
+  margin-left: 22.5px;
+  background-color: #001529;
+}

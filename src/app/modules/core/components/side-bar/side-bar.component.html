@@ -1,1 +1,25 @@
-<p>side-bar works!</p>
+<div class="side-bar-wrapper">
+  <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
+    <li nz-menu-item>
+      <a [routerLink]="callsPath">
+        <span nz-icon nzType="phone" nzTheme="outline"></span>
+        <span>Calls</span>
+      </a>
+    </li>
+
+    <li nz-menu-item>
+      <a [routerLink]="recentCallsPath">
+        <span nz-icon nzType="history" nzTheme="outline"></span>
+        <span>Recent Calls</span>
+      </a>
+    </li>
+  </ul>
+
+  <div>
+    <nz-divider></nz-divider>
+    <button nz-button nzType="primary" class="collapse-button" (click)="toggleCollapsed()">
+      <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+    </button>
+  </div>
+
+</div>
